@@ -1,0 +1,153 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #bcb986; /* color5 */
+    color: #120c00; /* color1 */
+}
+
+.navbar {
+    background-color: #96866e; /* color4 */
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-brand img {
+    height: 80px; /* Aumenta la altura del logo */
+    max-width: 150px; /* Evita que el logo se deforme */
+    width: auto;
+    margin-right: 0; /* Elimina el margen derecho */
+    display: inline-block;
+    vertical-align: middle; /* Centra verticalmente */
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #5f5b46; /* color3 */
+    color: #f8faf0; /* Texto en contraste */
+}
+
+.card-title {
+    color: #3d2817; /* color2 */
+}
+
+.btn-primary {
+    background-color: #96866e; /* color4 */
+    border-color: #3d2817; /* color2 */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #bcb986; /* color5 */
+    border-color: #5f5b46; /* color3 */
+}
+
+footer {
+    background-color: #96866e; /* color4 */
+    color: #120c00; /* color1 */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Menú lateral */
+#sidebarMenu {
+    width: 250px;
+    top: 0;
+    left: -250px;
+    position: fixed;
+    transition: left 0.3s;
+    z-index: 1050;
+    background-color: #5f5b46; /* color3 */
+    color: #f8faf0; /* Texto en contraste */
+}
+
+#sidebarMenu.show {
+    left: 0;
+}
+
+.list-group-item {
+    cursor: pointer;
+    color: #3d2817; /* color2 */
+    background-color: #96866e; /* color4 */
+}
+
+.list-group-item:hover {
+    background-color: #bcb986; /* color5 */
+}
+
+/* Ajustes de productos */
+.container .row {
+    margin: 0;
+}
+
+.card {
+    margin: 15px; /* Margen entre productos */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-4 {
+    flex: 0 0 calc(33.333% - 30px); /* Tres productos por fila con margen */
+    max-width: calc(33.333% - 30px);
+}
+
+#carouselContainer {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta este valor al ancho deseado del carrusel */
+    margin: auto;
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    border-radius: 10px;
+    background-color: #3d2817; /* color2 */
+}
+
+.carousel-image {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 300px; /* Ajusta este valor para establecer la altura estándar de las imágenes */
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%; /* Asegura que todas las imágenes ocupen el mismo espacio */
+    object-fit: cover; /* Ajusta las imágenes sin distorsionarlas */
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Efectos suaves */
+}
+
+.carousel-image:hover img {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+    filter: brightness(50%); /* Oscurece la imagen */
+}
+
+.description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f8faf0; /* Texto en contraste */
+    font-size: 1.2em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Efecto suave para mostrar la descripción */
+    z-index: 2;
+    background-color: rgba(18, 12, 0, 0.8); /* Fondo semitransparente con color1 */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-image:hover .description {
+    opacity: 1; /* Muestra la descripción al pasar el cursor */
+}

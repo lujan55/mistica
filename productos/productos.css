@@ -1,0 +1,54 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #bcb986; /* color5 */
+    color: #120c00; /* color1 */
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #5f5b46; /* color3 */
+    color: #f8faf0; /* Texto en contraste */
+}
+
+.card-title {
+    color: #3d2817; /* color2 */
+}
+
+.btn-primary {
+    background-color: #96866e; /* color4 */
+    border-color: #3d2817; /* color2 */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #bcb986; /* color5 */
+    border-color: #5f5b46; /* color3 */
+    color: #3d2817;
+}
+
+footer {
+    background-color: #96866e; /* color4 */
+    color: #120c00; /* color1 */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #96866e; /* color4 */
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-brand img {
+    height: 80px; /* Aumenta la altura del logo */
+    max-width: 150px; /* Evita que el logo se deforme */
+    width: auto;
+    margin-right: 0; /* Elimina el margen derecho */
+    display: inline-block;
+    vertical-align: middle; /* Centra verticalmente */
+}

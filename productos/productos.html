@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misitica Boutique</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS -->
+    <link href="productos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg">
+
+        <a class="navbar-brand" href="#">
+            <img src="/imagenes/logo.jpg" alt="Logo Tienda de Sahumerios">
+            MISTICA BOUTIQUE
+        </a>
+        <div class="ml-auto">
+            <button class="btn btn-light" id="cartButton">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge badge-pill badge-danger" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ruta_a_imagen1.jpg" class="card-img-top" alt="Sahumerio 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahumerio de Palo Santo</h5>
+                        <p class="card-text">Aroma natural y purificador, ideal para meditación y limpieza energética.
+                        </p>
+                        <button class="btn btn-primary add-to-cart" data-name="Palo Santo" data-price="150">Agregar al
+                            carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ruta_a_imagen2.jpg" class="card-img-top" alt="Sahumerio 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahumerio de Eucalipto</h5>
+                        <p class="card-text">Fresco y revitalizante, perfecto para crear un ambiente relajante.</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Eucalipto" data-price="120">Agregar al
+                            carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ruta_a_imagen3.jpg" class="card-img-top" alt="Sahumerio 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahumerio de Romero</h5>
+                        <p class="card-text">Estimula la concentración y aporta claridad mental.</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Romero" data-price="140">Agregar al
+                            carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ruta_a_imagen3.jpg" class="card-img-top" alt="Sahumerio 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahumerio de Romero</h5>
+                        <p class="card-text">Estimula la concentración y aporta claridad mental.</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Romero" data-price="140">Agregar al
+                            carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ruta_a_imagen3.jpg" class="card-img-top" alt="Sahumerio 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahumerio de Romero</h5>
+                        <p class="card-text">Estimula la concentración y aporta claridad mental.</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Romero" data-price="140">Agregar al
+                            carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="ruta_a_imagen3.jpg" class="card-img-top" alt="Sahumerio 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahumerio de Romero</h5>
+                        <p class="card-text">Estimula la concentración y aporta claridad mental.</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Romero" data-price="140">Agregar al
+                            carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal del carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems"></tbody>
+                    </table>
+                    <div class="text-right">
+                        <h5>Total: $<span id="cartTotal">0</span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" id="clearCart">Vaciar Carrito</button>
+                    <button class="btn btn-success">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Enlaces a JavaScript de Bootstrap y al archivo JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="productos.js"></script>
+</body>
+
+</html>

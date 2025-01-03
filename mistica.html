@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misitica Boutique</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS -->
+    <link href="mistica.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg">
+        <button class="btn btn-light mr-2" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <a class="navbar-brand" href="#">
+            <img src="/imagenes/logo.jpg" alt="Logo Tienda de Sahumerios">
+            MISTICA BOUTIQUE
+        </a>
+        <div class="ml-auto">
+            <button class="btn btn-light" id="cartButton">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge badge-pill badge-danger" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menú lateral -->
+    <div id="sidebarMenu" class="bg-light position-fixed h-100">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#" class="menu-link">Inicio</a></li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="/productos/productos.html" class="menu-link">Productos</a>
+                    <i class="fas fa-chevron-down" id="productosToggle"></i>
+                </div>
+                <ul class="list-group list-group-flush ml-3 mt-2 d-none" id="productosSubmenu">
+                    <li class="list-group-item"><a href="#" class="menu-link">Sahumerios</a></li>
+                    <li class="list-group-item"><a href="#" class="menu-link">Velas</a></li>
+                    <li class="list-group-item"><a href="#" class="menu-link">Hornitos</a></li>
+                    <li class="list-group-item"><a href="#" class="menu-link">Aceites</a></li>
+                </ul>
+            </li>
+            <li class="list-group-item"><a href="#" class="menu-link">Carrito</a></li>
+        </ul>
+    </div>
+    <!-- Carrusel -->
+    <div id="carouselContainer" class="carousel mt-5">
+        <div class="carousel-image active">
+            <img src="/imagenes/velas-flotantes.webp" alt="Velas">
+            <div class="description">Velas: Las velas aromaticas son una combinación de luz cálida y fragancias que transforman
+                cualquier espacio en un refugio de tranquilidad.</div>
+        </div>
+        <div class="carousel-image">
+            <img src="/imagenes/sahumerio.jpg" alt="Sahumerios">
+            <div class="description">Sahumerios: Los sahumerios son un antiguo recurso utilizado para purificar espacios
+              atraer energías positivas.</div>
+        </div>
+        <div class="carousel-image">
+            <img src="/imagenes/aceites.jpeg" alt="Aceites">
+            <div class="description">Aceites: Los aceites esenciales son extractos naturales cargados de propiedades terapeuticas,
+                utilizados en masajes, difusores o baños relajantes.</div>
+        </div>
+        <div class="carousel-image">
+            <img src="/imagenes/aromatizantes.jpg" alt="Aromatizantes">
+            <div class="description">Aromatizantes: Frescura en cada rincón.</div>
+        </div>
+        <div class="carousel-image">
+            <img src="/imagenes/hornitos.jpeg" alt="Hornitos">
+            <div class="description">Hornitos: Diseños que encantan.</div>
+        </div>
+        <div class="carousel-image">
+            <img src="/imagenes/inciensos.jpeg" alt="Inciensos">
+            <div class="description">Inciensos: El incienso es un recurso milenario para conectar con la espiritualidad y
+                la instrospección.</div>
+        </div>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems"></tbody>
+                    </table>
+                    <div class="text-right">
+                        <h5>Total: $<span id="cartTotal">0</span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" id="clearCart">Vaciar Carrito</button>
+                    <button class="btn btn-success">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="mt-5">
+        <p>&copy; 2024 Tienda de Sahumerios. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlaces a JavaScript de Bootstrap y al archivo JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="mistica.js"></script>
+</body>
+
+</html>
