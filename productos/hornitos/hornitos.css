@@ -10,8 +10,15 @@ body {
     align-items: center; /* Centra los elementos verticalmente */
 }
 
-.navbar-brand, .nav-link {
-    color: #ffffff !important;
+.navbar-brand,
+.nav-link {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: xx-large;
+    color: #3d2817; /* Marrón oscuro */
+
 }
 
 .navbar-brand img {
@@ -150,4 +157,98 @@ footer {
 
 .carousel-image:hover .description {
     opacity: 1; /* Muestra la descripción al pasar el cursor */
+}
+/* Fondo del modal */
+.modal-content {
+    background-color: #5f5b46; /* color3 */
+    color: #f8faf0; /* Texto en contraste */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Cabecera del modal */
+.modal-header {
+    background-color: #96866e; /* color4 */
+    color: #f8faf0; /* Texto en contraste */
+    border-bottom: 2px solid #bcb986; /* color5 */
+}
+
+.modal-title {
+    font-family: 'Poppins', sans-serif; /* Moderno y legible */
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+/* Botón de cierre */
+.modal-header .close {
+    color: #f8faf0; /* Contraste con fondo */
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+}
+
+/* Tabla dentro del modal */
+.table {
+    background-color: #96866e; /* color4 */
+    color: #f8faf0; /* Texto claro */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Encabezados de la tabla */
+.table thead th {
+    background-color: #3d2817; /* color2 */
+    color: #f8faf0; /* Texto claro */
+    text-align: center;
+}
+
+/* Celdas de la tabla */
+.table tbody tr td {
+    background-color: #bcb986; /* color5 */
+    color: #120c00; /* color1 */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #5f5b46; /* color3 */
+}
+
+/* Botones en el modal */
+.modal-footer .btn {
+    font-family: 'Poppins', sans-serif; /* Fuente armoniosa */
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Botón de Vaciar Carrito */
+#clearCart {
+    background-color: #3d2817; /* color2 */
+    color: #f8faf0;
+    border: 1px solid #5f5b46; /* color3 */
+}
+
+#clearCart:hover {
+    background-color: #5f5b46; /* color3 */
+    color: #bcb986; /* color5 */
+}
+
+/* Botón de Finalizar Compra */
+.modal-footer .btn-success {
+    background-color: #96866e; /* color4 */
+    color: #f8faf0;
+    border: 1px solid #bcb986; /* color5 */
+}
+
+.modal-footer .btn-success:hover {
+    background-color: #bcb986; /* color5 */
+    color: #120c00; /* color1 */
+}
+
+/* Texto del total */
+.text-right h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #3d2817; /* color2 */
 }
