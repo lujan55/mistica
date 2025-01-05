@@ -33,12 +33,6 @@ body {
 .card-title {
     color: #3d2817; /* color2 */
 }
-.card img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
-    height: 200px; /* Ajusta este valor para definir el tamaño cuadrado */
-    object-fit: cover; /* Recorta y centra la imagen dentro del contenedor */
-
-}
 
 .btn-primary {
     background-color: #96866e; /* color4 */
